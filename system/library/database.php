@@ -3,13 +3,13 @@
 
 	if(defined('DB_FORMAT')){
 		if(strtolower(DB_FORMAT) == "mysqli"){
-			require_once(SYSPATH.DS."database".DS."mysqli.php");
+			require_once("..".DS.SYSPATH.DS."database".DS."mysqli.php");
 		}elseif(strtolower(DB_FORMAT) == "pdo"){
-			require_once(SYSPATH.DS."database".DS."pdo.php");
+			require_once("..".DS.SYSPATH.DS."database".DS."pdo.php");
 		}else{
 			die("Il formato del database non esiste");
 		}
 	}else{
-		require_once(SYSPATH.DS."database".DS."mysqli.php");
+		require_once("..".DS.SYSPATH.DS."database".DS."mysqli.php");
 	}
 ?>
