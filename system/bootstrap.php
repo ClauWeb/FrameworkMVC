@@ -11,7 +11,7 @@
 		require_once(dirname(__FILE__).DS."library".DS.$lib_def.".php");
 	}
 	foreach($library_custom as $lib_cus){
-		require_once(BASEPATH.DS."library".DS.$lib_cus.".php");
+		require_once("..".DS.BASEPATH.DS."library".DS.$lib_cus.".php");
 	}
 	require(dirname(__FILE__).DS."resource".DS."model.php");
 	require(dirname(__FILE__).DS."resource".DS."view.php");
@@ -19,5 +19,5 @@
 	if(empty($nomefile[0])){
 		$nomefile[0] = BASE_CONTROLLER;
 	}
-	require_once(BASEPATH.DS."controllers".DS.basename($nomefile[0]).".php");
+	require_once("..".DS.BASEPATH.DS."controllers".DS.basename($nomefile[0]).".php");
 ?>

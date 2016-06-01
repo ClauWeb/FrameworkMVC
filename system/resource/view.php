@@ -4,7 +4,7 @@
 	function view($name, $data = []){
 		foreach($data as $k => $v)
 			${$k} = $v;
-		$view = BASEPATH.DS.'views'.DS.implode('/', explode('.', $name)).'.php';
+		$view = "..".DS.BASEPATH.DS.'views'.DS.implode('/', explode('.', $name)).'.php';
 		ob_start();
 		require($view);
 		$d = ob_get_contents();
